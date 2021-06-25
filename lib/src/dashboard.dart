@@ -39,7 +39,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       key: studentListKey,
       appBar: AppBar(
-        title: Text('Student List'),
+        title: Text('Item List'),
       ),
       body: Center(
         child: FutureBuilder<List<Item>>(
