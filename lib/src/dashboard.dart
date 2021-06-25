@@ -15,27 +15,6 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  // late Future<List<Item>> items;
-  // final studentListKey = GlobalKey<_DashboardState>();
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   items = getItemList();
-
-  // }
-
-  //getData API
-  // Future<List<Item>> getItemList() async {
-  //   final response = await http.get(Uri.parse("${Env.URL_PREFIX}/getdata.php"));
-  //   final items = json.decode(response.body).cast<Map<String, dynamic>>();
-  //   List<Item> subItem = items.map<Item>((json) {
-  //     return Item.fromJson(json);
-  //   }).toList();
-
-  //   return items.map<Item>((json)=>Item.fromJson(json)).toList();
-  // }
-
   Future<List<Item>> fetchItem(http.Client client) async {
     final response =
         await client.get(Uri.parse("${Env.URL_PREFIX}/getdata.php"));
@@ -50,9 +29,6 @@ class _DashboardState extends State<Dashboard> {
     return parsed.map<Item>((json) => Item.fromJson(json)).toList();
   }
 
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
