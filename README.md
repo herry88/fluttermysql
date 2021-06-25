@@ -18,3 +18,8 @@ samples, guidance on mobile development, and a full API reference.
 # Cara Install 
 git clone https://github.com/herry88/fluttermysql.git
 
+# Terminal
+flutter clean 
+flutter pub get
+
+
